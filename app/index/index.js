@@ -22,6 +22,7 @@ router.get('/posts', function*() {
  * post
  */
 router.get('/posts/:year/:month/:day/:postFileNameNoExt', function*() {
+  this.type = 'html';
   this.body = radiator.renderPost(this.params.postFileNameNoExt);
 });
 

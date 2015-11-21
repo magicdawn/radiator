@@ -102,7 +102,8 @@ gulp.task('browser-sync', function() {
       __dirname + '/app/*/css/**/*.less',
       __dirname + '/app/*/js/**/*.js',
       __dirname + '/app/*/view/**/*.swig',
-      __dirname + '/app/*/view/**/*.html'
+      __dirname + '/app/*/view/**/*.html',
+      __dirname + '/app/*/_posts/**/*.md'
     ],
     proxy: 'localhost:4000'
   });
