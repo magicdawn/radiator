@@ -28,6 +28,7 @@
     "koa-static": "^1.4.9",
     "less": "^2.5.1",
     "lodash": "^3.10.1",
-    "predator-kit": "^0.6.1"
+    "predator-kit": "^0.6.2",
+    "koa-etag": "^2.1.0"
   }
 }
