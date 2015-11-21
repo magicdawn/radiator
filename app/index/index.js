@@ -5,17 +5,24 @@
  */
 const router = module.exports = require('impress-router')();
 const render = require('predator-kit').getRender(__dirname);
+const radiator = require('lib/radiator')({
+  dirname: __dirname + '/_posts'
+});
 
 router.get('/', function*() {
   this.type = 'html';
   this.body = yield render('index');
 });
 
+router.get('/posts', function*() {
+  this.body = radiator.parse();
+});
+
 /**
  * post
  */
-router.get('/posts/:year/:month/:day/:postTitle', function*() {
-  this.body = this.params;
+router.get('/posts/:year/:month/:day/:postFileNameNoExt', function*() {
+  this.body = radiator.renderPost(this.params.postFileNameNoExt);
 });
 
 
