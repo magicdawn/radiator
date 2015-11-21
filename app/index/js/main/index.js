@@ -4,5 +4,5 @@
 var $ = require('jquery');
 
 $(function() {
-  alert('hello world');
+  console.log('hello world');
 });
