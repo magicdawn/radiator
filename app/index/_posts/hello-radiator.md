@@ -7,3 +7,12 @@ tags: [hello]
 
 # § Radiator §
 暖气片
+
+## H2
+
+`const x = x => x+1`
+
+```js
+/*eslint-disable*/
+const _ = require('lodash');
+```
