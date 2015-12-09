@@ -18,7 +18,7 @@
 <section>
   <div class="content">
     <div class="title">{{ p.title }}</div>
-    <div class="date">{{ p.date }}</div>
+    <div class="date">{{ p.date | datetime }}</div>
     <ul class="tags">
       {% for t in t.tags %}
         {{ t }}

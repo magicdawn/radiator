@@ -69,3 +69,8 @@ if (app.env !== 'production') {
     err.expose = true;
   });
 }
+
+/**
+ * swig 相关
+ */
+require('./lib/swig');
