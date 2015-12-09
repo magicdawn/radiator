@@ -9,26 +9,16 @@ const radiator = require('lib/radiator')({
   dirname: __dirname + '/_posts'
 });
 
-/**
- * sub router
- */
-
-
-router.get('/', function*() {
-  this.type = 'html';
-  this.body = yield render('index');
-});
-
-router.get('/posts', function*() {
-  this.body = radiator.parse();
-});
-
 router.get('/api/posts', function*() {
   this.body = radiator.parse();
 });
 
-// api
-router.use('/api', require('lib/routes/api'));
+router.get('/', function*() {
+  var posts = radiator.parse();
+  this.body = yield render('index', {
+    posts: posts
+  });
+});
 
 /**
  * post
