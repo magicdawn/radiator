@@ -9,7 +9,7 @@
 {% block body %}
 
   <div class="container">
-    <article class="row">
+    <article class="markdown-body">
       {{ content | safe }}
     </article>
   </div>
