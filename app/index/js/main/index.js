@@ -1,7 +1,8 @@
 'use strict';
 /* eslint no-var: 0 */ // eslint ES6 var const
 
-var $ = require('jquery');
+var $ = global.jQuery = require('jquery');
+require('bootstrap');
 
 $(function() {
   console.log('hello world');
