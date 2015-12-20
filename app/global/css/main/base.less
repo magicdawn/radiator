@@ -2,7 +2,7 @@
  * global base style
  */
 @import "npm://bootstrap";
-// @import (inline) '../typo.css';
+@import '../variable';
 
 body{
   // fixed top navbar
@@ -10,9 +10,7 @@ body{
 
   // font
   font-size: 16px;
-  font-family: Hack, Menlo,
-    'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Lantinghei SC', Arial,
-    'Microsoft YaHei', '微软雅黑', STHeiti, sans-serif;
+  font-family: @radiator-font;
 }
 
 // custom container
